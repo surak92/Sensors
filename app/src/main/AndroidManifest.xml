@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LocalFarmActivity"></activity>
+        <activity android:name=".FarmDetailActivity"></activity>
+        <activity android:name=".ZoneActivity"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.cku.sensor_test
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Rect
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.devs.vectorchildfinder.VectorChildFinder
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                     iv_korea.invalidate()
                 }
                 gangwonArea.contains(x, y) -> {
-                    flag = 1
+                    flag = flag+1
                     showToast("강원도를 선택했습니다!")
                     seoul.fillColor = Color.rgb(205,204,204)
                     chungnam.fillColor = Color.rgb(205,204,204)
@@ -94,6 +96,10 @@ class MainActivity : AppCompatActivity() {
                     incheon.fillColor = Color.rgb(205,204,204)
                     gangwon.fillColor = Color.GREEN
                     iv_korea.invalidate()
+                    if(flag == 2) {
+                        val intent = Intent(this, LocalFarmActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
                 jejuArea.contains(x, y) -> {
                     flag = 0
