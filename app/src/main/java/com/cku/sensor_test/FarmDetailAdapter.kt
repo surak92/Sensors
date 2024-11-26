@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class FarmDetailAdapter (
@@ -30,12 +31,17 @@ class FarmDetailAdapter (
         holder.tvDescription.text = zone.description
 
         // 클릭 이벤트 설정
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context, ZoneActivity::class.java).apply {
-                putExtra("zone_name", zone.name)
-                putExtra("zone_description", zone.description)
+        holder.itemView.setOnClickListener{
+            if(zone.name == "구역 1") {
+                val intent = Intent(context, ZoneActivity::class.java).apply {
+                    putExtra("zone_name", zone.name)
+                    putExtra("zone_description", zone.description)
+                }
+                context.startActivity(intent)
             }
-            context.startActivity(intent)
+            else{
+                Toast.makeText(it.context, "해당 구역은 준비중입니다!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

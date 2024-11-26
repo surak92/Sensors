@@ -37,6 +37,8 @@ android {
 
 dependencies {
     implementation("com.github.devsideal:VectorChildFinder:1.0.0")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation ("net.sourceforge.jexcelapi:jxl:2.6.12")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

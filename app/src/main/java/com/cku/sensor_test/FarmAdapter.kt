@@ -40,7 +40,7 @@ class FarmAdapter(
                 context.startActivity(intent)
             }
             else{
-
+                Toast.makeText(it.context, "해당 농장은 준비중입니다!", Toast.LENGTH_SHORT).show()
             }
         }
     }
