@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CKU_Sensors"
+        android:gravity="center">
+    </TextView>
+
+    <ImageView
+        android:layout_weight="10"
+        android:id="@+id/iv_korea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/map_of_south_korea_blank">
+    </ImageView>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="진입을 원하는 지역을 두번 터치해 주세요."
+        android:textSize="20dp"
+        android:gravity="center">
+    </TextView>
+
+</LinearLayout>
